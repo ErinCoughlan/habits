@@ -1,0 +1,75 @@
+html {
+	min-height:;
+}
+
+label {
+  width: 75px;
+  display: inline-block;
+}
+
+li {
+  list-style-type: none;
+  padding: 5px;
+}
+
+.title {
+	font-size: 150%;
+	text-align: center;
+}
+
+.open {
+	padding: 10px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.center {
+	margin: 0px auto;
+}
+
+.logout {
+	bottom: 25px;
+	position: absolute;
+}
+
+.bullet-container {
+	padding: 10px;
+}
+
+.bullet-container img {
+	float: left;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.bullet {
+	font-size: 18px;
+	height: 42px;
+}
+
+.open a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.panel a {
+  font-size: 14px;
+  padding: 15px 20px;
+  display: block;
+  text-decoration: none;
+}
+
+.rank, .name, .score {
+	line-height: 58px;
+	vertical-align: middle;
+}
+
+.score {
+	padding-right: 10px;
+}

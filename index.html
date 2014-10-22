@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Trainer</title>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css"/>
+    <link rel="stylesheet" href="css/core.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/handheld.css" type="text/css"
+    		media="handheld, only screen and (max-device-width:480px)" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+    <script src="//www.parsecdn.com/js/parse-1.2.19.min.js"></script>
+  </head>
+
+	<body>
+    <!-- Begin Main Page (for logged out view) -->
+		<div data-role="page" id="main">
+			<div data-role="header" data-position="fixed">
+	    	<h1 class="title">Habit Trainer</h1>
+        <a class="ui-btn-right" href="#login" data-role="button">Log In</a>
+	  	</div>
+
+	  	<div data-role="content" class="ui-content">
+        <h2>Improving your life is as easy as 1, 2, 3...</h2>
+        <div class="bullet-container">
+          <img src="img/1.png" alt="First" height="42" width="42">
+          <span class="bullet">Track new habits to get points.</span>
+        </div>
+        <div class="bullet-container">
+          <img src="img/2.png" alt="Second" height="42" width="42">
+          <span class="bullet">Compete with friends and motivate each other.</span>
+        </div>
+        <div class="bullet-container">
+          <img src="img/3.png" alt="Third" height="42" width="42">
+          <span class="bullet">Live a healthier, happier life.</span>
+        </div>
+        <h2>Log in to get started</h2>
+	  	</div>
+
+	  	<div data-role="footer" data-position="fixed">
+	    	<h1>Footer Text</h1>
+	  	</div>
+		</div>
+    <!-- End Info Page -->
+
+    <!-- Begin Login Page -->
+    <div data-role="page" id="login">
+      <div data-role="header" data-position="fixed">
+        <h1 class="title">Habit Trainer</h1>
+      </div>
+
+      <div data-role="content" class="ui-content">
+        <form>
+          <label for="username">Username:</label>
+          <input type="text" name="username" id="username" value=""><br>
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" value="" autocomplete="off">
+        </form>
+        <a class="center" href="#home" data-role="button">Log In</a>
+      </div>
+
+      <div data-role="footer" data-position="fixed">
+        <h1>Footer Text</h1>
+      </div>
+    </div>
+    <!-- End Login Page -->
+
+    <!-- Begin Home Page -->
+    <div data-role="page" id="home">
+      <div data-role="header" data-position="fixed">
+        <span class="open left"><a href="#nav">&#9776;</a></span>
+        <h1 class="title">Habit Trainer</h1>
+        <a class="ui-btn-right" href="#main" data-role="button">Log Out</a>
+      </div>
+
+      <div data-role="content" class="ui-content">
+        <h1>Welcome home.</h1>
+      </div>
+
+      <div class="panel left navigation" data-role="panel" data-position="left"
+          data-display="push" id="nav">  
+        <ul>
+          <li class="home"><a href="#home" title="Home">Home</a></li>
+          <li class="tracking"><a href="#tracking" title="Tracking">Tracking</a></li>
+          <li class="leaderboard"><a href="#leaderboard" title="Leaderboard">Leaderboard</a></li>
+          <li class="profile"><a href="#profile" title="Profile">Profile</a></li>
+          <li class="logout"><a href="#main" title="Logout">Logout</a></li>
+        </ul>  
+      </div> 
+
+      <div data-role="footer" data-position="fixed">
+        <h1>Footer Text</h1>
+      </div>
+    </div>
+    <!-- End Home Page -->
+
+    <!-- Begin Tracking Page -->
+    <div data-role="page" id="tracking">
+      <div data-role="header" data-position="fixed">
+        <span class="open left"><a href="#nav">&#9776;</a></span>
+        <h1 class="title">Habit Trainer</h1>
+        <a class="ui-btn-right" href="#main" data-role="button">Log Out</a>
+      </div>
+
+      <div data-role="main" class="ui-content">
+        Tracking
+      </div>
+
+      <div class="panel left navigation" data-role="panel" data-position="left"
+          data-display="push" id="nav">  
+        <ul>
+          <li class="home"><a href="#home" title="Home">Home</a></li>
+          <li class="tracking"><a href="#tracking" title="Tracking">Tracking</a></li>
+          <li class="leaderboard"><a href="#leaderboard" title="Leaderboard">Leaderboard</a></li>
+          <li class="profile"><a href="#profile" title="Profile">Profile</a></li>
+          <li class="logout"><a href="#main" title="Logout">Logout</a></li>
+        </ul>  
+      </div> 
+
+      <div data-role="footer" data-position="fixed">
+        <h1>Footer Text</h1>
+      </div>
+    </div>
+    <!-- End Tracking Page -->
+
+    <!-- Begin Leaderboard Page -->
+    <div data-role="page" id="leaderboard">
+      <div data-role="header" data-position="fixed">
+        <span class="open left"><a href="#nav">&#9776;</a></span>
+        <h1 class="title">Habit Trainer</h1>
+        <a class="ui-btn-right" href="#main" data-role="button">Log Out</a>
+      </div>
+
+      <div data-role="main" class="ui-content">
+        <h2>Leaderboard</h2>
+        <ul data-role="listview">
+          <li><a href="#">
+            <img src="img/erin.jpg">
+            <span class="rank">1.</span>
+            <span class="name">Erin</span>
+            <span class="right score">13 points</span>
+          </a></li>
+          <li><a href="#">
+            <img src="img/sophie.jpg">
+            <span class="rank">2.</span>
+            <span class="name">Sophie</span>
+            <span class="right score">12 points</span>
+          </a></li>
+          <li><a href="#">
+            <img src="img/priya.jpg">
+            <span class="rank">3.</span>
+            <span class="name">Priya</span>
+            <span class="right score">10 points</span>
+          </a></li>
+        </ul>
+      </div>
+
+      <div class="panel left navigation" data-role="panel" data-position="left"
+          data-display="push" id="nav">  
+        <ul>
+          <li class="home"><a href="#home" title="Home">Home</a></li>
+          <li class="tracking"><a href="#tracking" title="Tracking">Tracking</a></li>
+          <li class="leaderboard"><a href="#leaderboard" title="Leaderboard">Leaderboard</a></li>
+          <li class="profile"><a href="#profile" title="Profile">Profile</a></li>
+          <li class="logout"><a href="#main" title="Logout">Logout</a></li>
+        </ul>  
+      </div> 
+
+      <div data-role="footer" data-position="fixed">
+        <h1>Footer Text</h1>
+      </div>
+    </div>
+    <!-- End Leaderboard Page -->
+
+    <!-- Begin Profile Page -->
+    <div data-role="page" id="profile">
+      <div data-role="header" data-position="fixed">
+        <span class="open left"><a href="#nav">&#9776;</a></span>
+        <h1 class="title">Habit Trainer</h1>
+        <a class="ui-btn-right" href="#main" data-role="button">Log Out</a>
+      </div>
+
+      <div data-role="main" class="ui-content">
+        Profile
+      </div>
+
+      <div class="panel left navigation" data-role="panel" data-position="left"
+          data-display="push" id="nav">  
+        <ul>
+          <li class="home"><a href="#home" title="Home">Home</a></li>
+          <li class="tracking"><a href="#tracking" title="Tracking">Tracking</a></li>
+          <li class="leaderboard"><a href="#leaderboard" title="Leaderboard">Leaderboard</a></li>
+          <li class="profile"><a href="#profile" title="Profile">Profile</a></li>
+          <li class="logout"><a href="#main" title="Logout">Logout</a></li>
+        </ul>  
+      </div> 
+
+      <div data-role="footer" data-position="fixed">
+        <h1>Footer Text</h1>
+      </div>
+    </div>
+    <!-- End Profile Page -->
+	</body>
+</html>
